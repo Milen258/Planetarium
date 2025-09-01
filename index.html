@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hy">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planetarium</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">🌌 Planetarium</div>
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#tickets">Tickets</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <i class="fas fa-bars icons" id="menu-btn"></i>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="image_container">
+      <div class="text" data-aos="fade-right">
+        <h1 class="text1">Welcome to our Planet</h1>
+        <p class="text2">Explore the Universe with us</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" data-aos="fade-up">
+      <h1>Planets</h1>
+
+      <div class="container">
+        <p>
+          A planet is a large, rounded astronomical body that is generally
+          required to be in orbit around a star, stellar remnant, or brown
+          dwarf, and is not one itself.The Solar System has eight planets by the
+          most restrictive definition of the term: the terrestrial planets
+          Mercury, Venus, Earth, and Mars, and the giant planets Jupiter,
+          Saturn, Uranus, and Neptune. The best available theory of planet
+          formation is the nebular hypothesis, which posits that an interstellar
+          cloud collapses out of a nebula to create a young protostar orbited by
+          a protoplanetary disk. Planets grow in this disk by the gradual
+          accumulation of material driven by gravity, a process called
+          accretion.
+        </p>
+        <div class="box" data-aos="zoom-in" data-aos-delay="100">
+          <h2>Sun</h2>
+          <img src="img/sun.jpg" alt="sun" class="lightbox-item" />
+        </div>
+        <div class="box" data-aos="zoom-in" data-aos-delay="200">
+          <h2>Moon</h2>
+          <img src="img/moon.jpg" alt="moon" class="lightbox-item" />
+        </div>
+        <div class="box" data-aos="zoom-in" data-aos-delay="300">
+          <h2>Earth</h2>
+          <img src="img/earth.jpg" alt="earth" class="lightbox-item" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKETS -->
+    <section id="tickets" class="tickets" data-aos="fade-left">
+      <h2 class="head">Book Your Ticket</h2>
+      <div class="body">
+        <ul>
+          <li>Ticket1 <span>Sold out</span></li>
+        </ul>
+        <ul>
+          <li>Ticket2 <span>Sold out</span></li>
+        </ul>
+        <ul>
+          <li>Ticket3 <span class="span3">3</span></li>
+        </ul>
+      </div>
+
+      <div class="galaxy_grid">
+        <div class="galaxy_1">
+          <img src="./img/sun1.jpg" alt="sun" class="lightbox-item" />
+          <br /><br />
+          <h3>Sun</h3>
+          <p>
+            <br /><br />
+            The Sun is the star at the center of the Solar System. It is a
+            massive, nearly perfect sphere of hot plasma, heated to
+            incandescence by nuclear fusion reactions in its core, radiating the
+            energy from its surface mainly as visible light and infrared
+            radiation with 10% at ultraviolet energies. It is by far the most
+            important source of energy for life on Earth.
+            <br /><br />
+          </p>
+          <button class="book-btn">Book Ticket</button>
+        </div>
+        <div class="galaxy_1">
+          <img src="./img/solarsystem.jpg" alt="solar" class="lightbox-item" />
+          <br /><br />
+          <h3>Solar System</h3>
+          <p>
+            <br /><br />
+            The Solar System is the gravitationally bound system of the Sun and
+            the objects that orbit it. It formed about 4.6 billion years ago
+            when a dense region of a molecular cloud collapsed, forming the Sun
+            and a protoplanetary disc. The Sun is a typical star that maintains
+            a balanced equilibrium by the fusion of hydrogen.
+            <br /><br />
+          </p>
+          <button class="book-btn">Book Ticket</button>
+        </div>
+        <div class="galaxy_1">
+          <img src="./img/stars.jpg" alt="stars" class="lightbox-item" />
+          <br /><br />
+          <h3>Stars</h3>
+          <p>
+            <br /><br />
+            A star is a luminous spheroid of plasma held together by
+            self-gravity.The nearest star to Earth is the Sun. Many other stars
+            are visible to the naked eye at night; their immense distances from
+            Earth make them appear as fixed points of light. The most prominent
+            stars have been categorised into constellations and asterisms.
+            <br /><br />
+          </p>
+          <button class="book-btn">Book Ticket</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <p>© 2025 Planetarium — All Rights Reserved</p>
+      <p>🌍 Planet World &copy; 2025</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="lab.js"></script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #0d0d0d;
+  color: white;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: black;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0ff;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #0ff;
+  font-size: 25px;
+  transition: 0.3s;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #0ff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.nav-links a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.icons {
+  font-size: 20px;
+  color: #0ff;
+}
+#menu-btn {
+  display: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* HOME */
+.image_container {
+  margin-top: 40px;
+  background: url("../img/planet2.jpg") no-repeat center/cover;
+  height: 100vh;
+  position: relative;
+}
+.text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.text1 {
+  font-size: 60px;
+}
+.text2 {
+  font-size: 25px;
+}
+
+/* GALLERY */
+#gallery {
+  background: url("../img/planet1.jpg") no-repeat center/cover;
+  padding: 60px 20px;
+}
+#gallery h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #0d0d0d;
+}
+#gallery h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #0d0d0d;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+}
+.container p {
+  grid-column: 1/-1;
+  text-align: justify;
+  font-family: "Orbitron";
+  color: #0d0d0d;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+.box img {
+  width: 300px;
+  height: 170px;
+  border: 2px solid rgb(10, 10, 10);
+  transition: all 1s;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.box img:hover {
+  transform: scale(1.05);
+  width: 350px;
+  height: 190px;
+  border: 2px solid #080808;
+  border-radius: 50px;
+  opacity: 0.9;
+}
+
+/* TICKETS */
+.tickets {
+  background: url("../img/planet.jpg") no-repeat center/cover;
+  padding: 50px 20px;
+}
+.head {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.body {
+  max-width: 700px;
+  margin: auto;
+}
+ul {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 10px 0px;
+  padding: 15px;
+  font-size: 20px;
+  list-style: none;
+  border-radius: 8px;
+}
+span {
+  background: crimson;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.span3 {
+  float: right;
+  border-radius: 50%;
+}
+.galaxy_grid {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.galaxy_1 {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+}
+.galaxy_1 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+.galaxy_1 img:hover {
+  border: 3px solid white;
+  transition: all 1s;
+  border-radius: 50px;
+}
+button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(45deg, #0ff, #06f);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #06f, #0ff);
+}
+footer {
+  background: #000;
+  color: #0ff;
+  text-align: center;
+  padding: 30px 20px;
+}
+footer .social-icons a {
+  color: #0ff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+footer .social-icons a:hover {
+  color: #06f;
+  transform: scale(1.2);
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.lightbox-content {
+  display: block;
+  margin: 50px auto;
+  max-width: 80%;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MEDIA */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
